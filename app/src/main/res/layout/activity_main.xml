@@ -11,7 +11,7 @@
         android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="80dp"
         android:layout_marginTop="50dp"
         app:srcCompat="@mipmap/ic_launcher_round" />
 
@@ -19,15 +19,16 @@
         android:id="@+id/pokaz_obrazek"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="60dp"
         android:text="Pokaż obrazek"
-        android:layout_marginLeft="250dp" />
+        android:layout_marginLeft="220dp" />
 
     <EditText
         android:id="@+id/nazwa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
+        android:layout_marginLeft="20dp"
         android:ems="10"
         android:hint="Nazwa"
         android:inputType="text" />
@@ -36,7 +37,8 @@
         android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginLeft="20dp"
         android:ems="10"
         android:inputType="text"
         android:hint="E-mail"
@@ -48,14 +50,16 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="320dp"
+        android:layout_marginLeft="20dp"
         android:hint="Hasło"/>
 
     <EditText
         android:id="@+id/ponowhaslo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="380dp"
+        android:layout_marginLeft="20dp"
         android:ems="10"
         android:inputType="textPassword"
         android:hint="Powtórz Hasło"
@@ -84,7 +88,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Płeć"
-        android:layout_marginTop="480dp"
+        android:layout_marginTop="460dp"
         android:layout_marginLeft="20dp"
         />
 
@@ -92,7 +96,7 @@
         android:id="@+id/rgGlowny"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_marginTop="500dp"
         android:layout_marginLeft="20dp">
 
@@ -120,8 +124,8 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="550dp"
-        android:text="Miasto"
+        android:layout_marginTop="560dp"
+        android:text="Państwo"
         android:layout_centerHorizontal="true"
          />
 
@@ -138,7 +142,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="500dp"
-        android:layout_marginLeft="300dp"
+        android:layout_marginLeft="260dp"
         android:text="Rejestruj"
          />
 

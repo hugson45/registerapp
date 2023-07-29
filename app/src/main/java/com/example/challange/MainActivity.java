@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
         String strEmail = email.getText().toString();
         String strPassword = haslo.getText().toString();
         String strRetPassword = ponowhaslo.getText().toString();
+        String name = null;
 
         if (TextUtils.isEmpty(strUserName)) {
             nazwa.setError("Wpisz nazwe");
@@ -88,32 +89,33 @@ public class MainActivity extends AppCompatActivity {
             return false;
         }
 
-        if (checkedbutton == R.id.man) {
-            Toast.makeText(MainActivity.this, "Mezczyzna", Toast.LENGTH_SHORT).show();
-            return true;
-        }else if (checkedbutton == R.id.woman) {
-            Toast.makeText(this, "Kobieta", Toast.LENGTH_SHORT).show();
-            return true;
-        }else if (checkedbutton == R.id.other)
-        {
-            Toast.makeText(this, "Inne", Toast.LENGTH_SHORT).show();
-        }else
-        {
-            Toast.makeText(this, "Wybierz Płeć", Toast.LENGTH_SHORT).show();
-            return false;
-        }
-
-
-        if (zgoda.isChecked()) {
-            Toast.makeText(MainActivity.this, "Kontynuuaje rejestracje", Toast.LENGTH_SHORT).show();
-            return true;
-        } else {
+        if (zgoda.isChecked()== false) {
             Toast.makeText(MainActivity.this, "Nie zaznaczyles zgody", Toast.LENGTH_SHORT).show();
             return false;
         }
 
 
+        if(panstwa.getSelectedItem() == "") {
+            Toast.makeText(this, "Wybierz państwo", Toast.LENGTH_SHORT).show();
+            return false;
+        }
 
+        if (checkedbutton == R.id.man) {
+            Toast.makeText(MainActivity.this, "Mezczyzna", Toast.LENGTH_SHORT).show();
+            return true;
+        } else if (checkedbutton == R.id.woman) {
+            Toast.makeText(this, "Kobieta", Toast.LENGTH_SHORT).show();
+            return true;
+        } else if (checkedbutton == R.id.other) {
+            Toast.makeText(this, "Inne", Toast.LENGTH_SHORT).show();
+            return true;
+        } else if (checkedbutton == -1) {
+
+            Toast.makeText(this, "Wybierz Płeć", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        return true;
     }
 
     @Override
@@ -134,11 +136,12 @@ public class MainActivity extends AppCompatActivity {
         panstwa = findViewById(R.id.panstwa);
 
         ArrayList<String> miejscowosci = new ArrayList<>();
-        miejscowosci.add("Poznań");
-        miejscowosci.add("Warszawa");
-        miejscowosci.add("Wrocław");
-        miejscowosci.add("Kraków");
-        miejscowosci.add("Gdańsk");
+        miejscowosci.add("");
+        miejscowosci.add("Polska");
+        miejscowosci.add("Niemcy");
+        miejscowosci.add("Litwa");
+        miejscowosci.add("Czechy");
+        miejscowosci.add("Ukraina");
 
         ArrayAdapter<String> panstwaAdapter = new ArrayAdapter<>(
                 this,
